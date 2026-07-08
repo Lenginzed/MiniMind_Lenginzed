@@ -1,0 +1,79 @@
+{
+  "artifact_checks": {
+    "checkpoint_model_config": {
+      "context_length": 128,
+      "dropout": 0.0,
+      "intermediate_size": 512,
+      "n_embd": 192,
+      "n_head": 6,
+      "n_kv_head": 2,
+      "n_layer": 3,
+      "rms_norm_eps": 1e-06,
+      "rope_theta": 10000.0,
+      "tie_word_embeddings": true,
+      "use_gradient_checkpointing": true,
+      "vocab_size": 2000
+    },
+    "checkpoint_ok": true,
+    "checkpoint_params": 1564992,
+    "checkpoint_path": "outputs\\sft_full\\checkpoints\\best.pt",
+    "tokenizer_ok": true,
+    "tokenizer_path": "data\\tokenizers\\mixed_tokenizer.json",
+    "tokenizer_vocab_size": 2000
+  },
+  "bf16_matmul_test": {
+    "dtype": "torch.bfloat16",
+    "ok": true,
+    "shape": [
+      512,
+      512
+    ]
+  },
+  "cuda_available": true,
+  "disk": {
+    "free_gb": 718.4459342956543,
+    "total_gb": 875.2849769592285,
+    "used_gb": 156.83904266357422
+  },
+  "nvidia_smi": {
+    "driver_version": "591.86",
+    "gpu_name": "NVIDIA GeForce RTX 4080 SUPER",
+    "memory_free_mb": 14259,
+    "memory_total_mb": 16376,
+    "raw_processes": {
+      "ok": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Wed Jul  8 13:26:08 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 591.86                 Driver Version: 591.86         CUDA Version: 13.1     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4080 ...  WDDM  |   00000000:01:00.0  On |                  N/A |\n|  0%   42C    P0             60W /  320W |    1789MiB /  16376MiB |      5%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            5528    C+G   ...8bbwe\\PhoneExperienceHost.exe      N/A      |\n|    0   N/A  N/A           12572    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A           12976    C+G   ...ntrolPanel\\SystemSettings.exe      N/A      |\n|    0   N/A  N/A           13032    C+G   ...t\\Edge\\Application\\msedge.exe      N/A      |\n|    0   N/A  N/A           13272    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A           13712    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A           15868    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           15876    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           18764    C+G   ...App_cw5n1h2txyewy\\LockApp.exe      N/A      |\n|    0   N/A  N/A           20496    C+G   ....0.4022.98\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           23956    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           24864    C+G   ...ouryDevice\\asus_framework.exe      N/A      |\n|    0   N/A  N/A           25900    C+G   ....0.4022.98\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           26720    C+G   ...al\\Programs\\Notion\\Notion.exe      N/A      |\n|    0   N/A  N/A           27244    C+G   ...er\\Application\\AVGBrowser.exe      N/A      |\n|    0   N/A  N/A           31904    C+G   ....0.4022.98\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           33040    C+G   ...t\\Edge\\Application\\msedge.exe      N/A      |\n|    0   N/A  N/A           34228    C+G   ...__2p2nqsd0c76g0\\app\\Codex.exe      N/A      |\n|    0   N/A  N/A           35776    C+G   ...4__p7pnf6hceqser\\snipaste.exe      N/A      |\n|    0   N/A  N/A           36688    C+G   ....0.4022.98\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           36884    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n|    0   N/A  N/A           36948    C+G   ...xyewy\\ShellExperienceHost.exe      N/A      |\n+-----------------------------------------------------------------------------------------+"
+    },
+    "raw_query": {
+      "ok": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "NVIDIA GeForce RTX 4080 SUPER, 16376, 14259, 591.86"
+    }
+  },
+  "python_executable": "D:\\anaconda3\\envs\\YSJAirCombat\\python.exe",
+  "recommendation": {
+    "batch_size": 4,
+    "context_length": 256,
+    "gradient_accumulation_steps": 8,
+    "model_config": "configs/stage7/model_50m.yaml",
+    "notes": "Enough free memory for a 40M-50M educational run with bf16 and gradient checkpointing.",
+    "recommended_tier": "50M"
+  },
+  "risks": [
+    "OOM risk increases with 50M model, DPO reference model, GRPO online generation, and larger context length.",
+    "Long runs may be interrupted; use checkpoint last.pt and --resume for pretrain.",
+    "Public dataset download may fail; Stage 7 dataset script falls back to local synthetic corpus."
+  ],
+  "torch_cuda": "12.1",
+  "torch_gpu": {
+    "allocated_mb": 0,
+    "bf16_supported": true,
+    "name": "NVIDIA GeForce RTX 4080 SUPER",
+    "reserved_mb": 0,
+    "total_memory_mb": 16375
+  },
+  "torch_version": "2.1.0+cu121"
+}

@@ -1,0 +1,326 @@
+{
+  "bf16_supported": true,
+  "cuda_available": true,
+  "dataset_metadata_summary": {
+    "dpo": {
+      "category_counts": {
+        "alpaca_farm": 10000
+      },
+      "download": {
+        "bytes": 14876513,
+        "elapsed_sec": 14.322,
+        "path": "data\\stage8_public\\download_cache\\alpaca_gpt4_preference.json",
+        "url": "https://huggingface.co/datasets/tatsu-lab/alpaca_farm/resolve/main/alpaca_gpt4_preference.json"
+      },
+      "fallback": false,
+      "field_mapping": "instruction/input plus chosen/rejected or output_1/output_2/preference",
+      "field_probe": [
+        {
+          "fields": [
+            "input",
+            "instruction",
+            "output_1",
+            "output_2",
+            "preference"
+          ],
+          "file": "alpaca_gpt4_preference.json",
+          "first": "{'instruction': 'Access the default browser settings on a computer.', 'input': '', 'output_1': 'To access the default browser settings on a computer, open the settings menu by clicking on the gear icon in the top right corner. Then go to the “Browser” section and adjust the settings as needed. You can change the default home page, add new tabs, or change the search engine.', 'output_2': 'In the Google Chrome browser, the default settings can be accessed by clicking the wrench icon at the top right corner and selecting \"Settings\". In the settings window, you can modify the default search engine, browsing history and other general settings. Additionally, many other browsers such as Microsoft Edge, Mozilla Firefox and Apple Safari have similar settings panels that can be used to access and modify their default settings.', 'preference': 2}"
+        }
+      ],
+      "method": "urllib_json",
+      "rejected_type_counts": {
+        "public_preference": 10000
+      },
+      "source_dataset": "tatsu-lab/alpaca_farm",
+      "source_file": "alpaca_gpt4_preference.json",
+      "success": true,
+      "train": 10000,
+      "val": 1000
+    },
+    "grpo": {
+      "fallback": false,
+      "note": "GRPO remains local verifiable reward data by design.",
+      "source_dataset": "local_verifiable_reward",
+      "success": true
+    },
+    "pretrain": {
+      "bytes": 10717316,
+      "chars": 10662375,
+      "config": "wikitext-2-raw-v1",
+      "download": {
+        "bytes": 6357543,
+        "elapsed_sec": 10.041,
+        "path": "data\\stage8_public\\download_cache\\wikitext-2-raw-v1__train-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/main/wikitext-2-raw-v1/train-00000-of-00001.parquet"
+      },
+      "fallback": false,
+      "lines": 16929,
+      "method": "urllib_parquet",
+      "path": "data\\stage8_public\\raw\\pretrain_public.txt",
+      "samples": 16929,
+      "source_dataset": "Salesforce/wikitext",
+      "source_file": "wikitext-2-raw-v1/train-00000-of-00001.parquet",
+      "split": "train",
+      "success": true
+    },
+    "sft": {
+      "category_counts": {
+        "alpaca": 20000
+      },
+      "download": {
+        "bytes": 24246638,
+        "elapsed_sec": 21.027,
+        "path": "data\\stage8_public\\download_cache\\data__train-00000-of-00001-a09b74b3ef9c3b56.parquet",
+        "url": "https://huggingface.co/datasets/tatsu-lab/alpaca/resolve/main/data/train-00000-of-00001-a09b74b3ef9c3b56.parquet"
+      },
+      "fallback": false,
+      "field_mapping": {
+        "category": "alpaca",
+        "input": "input",
+        "instruction": "instruction",
+        "output": "output"
+      },
+      "method": "urllib_parquet",
+      "source_dataset": "tatsu-lab/alpaca",
+      "source_file": "data/train-00000-of-00001-a09b74b3ef9c3b56.parquet",
+      "split": "train",
+      "success": true,
+      "train": 20000,
+      "val": 2000
+    }
+  },
+  "disk_free_gb": 713.43,
+  "disk_total_gb": 875.28,
+  "dpo_train": {
+    "count": 10000,
+    "exists": true,
+    "sample": [
+      {
+        "category": "alpaca_farm",
+        "chosen": "In the graphic design industry, there are many potential professional opportunities available. These opportunities range from freelance work to in-house positions at design studios, advertising agencies, and various other companies. Freelance opportunities may include anything from logo design to illustration, while in-house positions typically focus on creating marketing materials and visual identities. Additionally, many graphic designers pursue careers in other related fields, such as photography, web design, or animation.",
+        "input": "Graphic design",
+        "instruction": "Describe the different types of professional opportunities available in a given industry.",
+        "reason": "mapped from AlpacaFarm public preference fields",
+        "rejected": "Professional opportunities in the field of graphic design include jobs in the areas of web design, app design, graphic design, animation, motion graphics, illustration, and art direction. Depending on the individual’s skills and interests, graphic designers can work in a variety of industries, such as advertising, publication, video games, and product design.",
+        "rejected_type": "public_preference"
+      },
+      {
+        "category": "alpaca_farm",
+        "chosen": "Here's to a wonderful day and a bright future ahead!",
+        "input": "",
+        "instruction": "Create an appropriate toast for a celebratory event",
+        "reason": "mapped from AlpacaFarm public preference fields",
+        "rejected": "Here's to celebrating many more wonderful moments in the future!",
+        "rejected_type": "public_preference"
+      },
+      {
+        "category": "alpaca_farm",
+        "chosen": "I recently saw the new Brad Pitt movie and I have to say, it was truly impressive. The acting was incredible and the story was really engaging. Brad Pitt gave an incredible performance and the supporting cast was also strong. The director did an amazing job of creating an immersive environment and drawing you into the movie. It's great to see a movie that really makes you think but also manages to be entertaining. Highly recommended!",
+        "input": "",
+        "instruction": "Compose a review for the new Brad Pitt movie",
+        "reason": "mapped from AlpacaFarm public preference fields",
+        "rejected": "Brad Pitt's new movie is a thrilling and thought-provoking adventure. The story follows Pitt's character as he investigates a mysterious traveler's society and it's incredible to watch the journey unfold. The movie is visually stunning and the soundtrack is incredibly moving. Overall, this is a must-see movie for anyone who loves science fiction and adventure!",
+        "rejected_type": "public_preference"
+      }
+    ]
+  },
+  "dpo_val": {
+    "count": 1000,
+    "exists": true,
+    "sample": [
+      {
+        "category": "alpaca_farm",
+        "chosen": "Computer science",
+        "input": "Computer, science",
+        "instruction": "Construct a compound word using the following two words:",
+        "reason": "mapped from AlpacaFarm public preference fields",
+        "rejected": "Computer science.",
+        "rejected_type": "public_preference"
+      },
+      {
+        "category": "alpaca_farm",
+        "chosen": "1. Park the car on a level surface.\n2. Use a wrench to loosen the oil drain plug located at the bottom of the engine.\n3. Allow the oil to drain into a suitable container.\n4. Wipe up any excess oil with a rag.\n5. Reverse the wrench clockwise to tighten the oil drain plug.\n6. Place motor oil in the engine according to the manufacturer’s instructions.\n7. Start the car and allow it to idle for a few minutes.\n8. Check the oil level using the dipstick.\n9. To complete the task, add more motor oil if needed.\n10. Tighten the oil drain plug one last time with a wrench.",
+        "input": "",
+        "instruction": "Document the steps for changing the oil in a car.",
+        "reason": "mapped from AlpacaFarm public preference fields",
+        "rejected": "The steps for changing the oil in a car are: \n1. Drain the oil from the oil pan. 2. Remove the oil filter. 3. Wipe off the oil dipstick. 4. Pour new oil into the engine. 5. Start the engine and let it run for several minutes. 6. Check the oil level on the dipstick. 7. Adjust the level if needed. 8. Reinstall the oil filter. 9. Replace the oil fill cap. 10. Verify that the oil is at the proper level.",
+        "rejected_type": "public_preference"
+      },
+      {
+        "category": "alpaca_farm",
+        "chosen": "Machines can perform certain tasks faster and more accurately than humans, and can also provide assistance when a person's mobility is limited. For example, machines can be programmed to perform tasks such as housekeeping, meal preparation, grocery shopping, transportation, and medicine management. Furthermore, machines can offer assistance with communication tasks, such as reminding or requesting help from family members or caregivers. This can help people with daily tasks and relieve much of their burden.",
+        "input": "Noinput",
+        "instruction": "Describe how machines can help people with their daily tasks.",
+        "reason": "mapped from AlpacaFarm public preference fields",
+        "rejected": "Machines can be used to automate mundane and repetitive tasks, freeing up time for people to focus on more creative activities. Machines can also be used to increase efficiency and safety, for example computers can be used to monitor traffic flows and send users notifications. Machines can also be used to assist those with disabilities and medical conditions, for example they can be used to aid mobility and provide support with daily tasks such as cooking and cleaning.",
+        "rejected_type": "public_preference"
+      }
+    ]
+  },
+  "gpu": {
+    "gpus": [
+      {
+        "memory_free_mib": 13891,
+        "memory_total_mib": 16376,
+        "memory_used_mib": 2157,
+        "name": "NVIDIA GeForce RTX 4080 SUPER"
+      }
+    ],
+    "ok": true,
+    "raw": "NVIDIA GeForce RTX 4080 SUPER, 16376, 2157, 13891\n"
+  },
+  "model_config_path": "configs/stage8_public/model_50m_public.yaml",
+  "output_status": {
+    "dpo_full": {
+      "exists": false,
+      "metrics_exists": false,
+      "metrics_size": null,
+      "path": "outputs\\stage8_public\\dpo_public_full"
+    },
+    "dpo_lora": {
+      "exists": false,
+      "metrics_exists": false,
+      "metrics_size": null,
+      "path": "outputs\\stage8_public\\dpo_public_lora"
+    },
+    "grpo_full": {
+      "exists": false,
+      "metrics_exists": false,
+      "metrics_size": null,
+      "path": "outputs\\stage8_public\\grpo_public_full"
+    },
+    "grpo_lora": {
+      "exists": false,
+      "metrics_exists": false,
+      "metrics_size": null,
+      "path": "outputs\\stage8_public\\grpo_public_lora"
+    },
+    "pretrain": {
+      "exists": false,
+      "metrics_exists": false,
+      "metrics_size": null,
+      "path": "outputs\\stage8_public\\pretrain_public_long"
+    },
+    "sft_full": {
+      "exists": false,
+      "metrics_exists": false,
+      "metrics_size": null,
+      "path": "outputs\\stage8_public\\sft_public_full"
+    },
+    "sft_lora": {
+      "exists": false,
+      "metrics_exists": false,
+      "metrics_size": null,
+      "path": "outputs\\stage8_public\\sft_public_lora"
+    }
+  },
+  "parameter_count": 45631296,
+  "pretrain_config_path": "configs/stage8_public/pretrain_public_long.yaml",
+  "python_executable": "D:\\anaconda3\\envs\\YSJAirCombat\\python.exe",
+  "recommendation": {
+    "context_length": 256,
+    "dpo_max_steps": 1000,
+    "dtype": "bf16",
+    "grpo_max_steps": 150,
+    "pretrain_batch_size": 4,
+    "pretrain_gradient_accumulation_steps": 8,
+    "pretrain_max_steps": 1500,
+    "sft_max_steps": 1500
+  },
+  "sft_train": {
+    "count": 20000,
+    "exists": true,
+    "sample": [
+      {
+        "category": "alpaca",
+        "input": "",
+        "instruction": "Explain the AI application called “Smart Thermostat”",
+        "output": "A smart thermostat is a type of AI application that uses sensors to detect and learn the temperatures that are most comfortable for a user. It can make automatic adjustments to temperature settings and use algorithms to adjust temperatures based on how people interact with it. Smart thermostats can save up to 30% on energy bills."
+      },
+      {
+        "category": "alpaca",
+        "input": "",
+        "instruction": "Create HTML code for a registration form.",
+        "output": "<!DOCTYPE html>\n<html>\n<head>\n<title>Registration Form</title>\n</head>\n<body>\n\n<form action=\"/form-submit\" method=\"POST\">\n  <div>\n    <label for=\"name\">Name:</label><br>\n    <input type=\"text\" id=\"name\" name=\"name\">\n  </div>\n  <div>\n    <label for=\"email\">Email:</label><br>\n    <input type=\"email\" id=\"email\" name=\"email\">\n  </div>\n  <div>\n    <label for=\"password\">Password:</label><br>\n    <input type=\"password\" id=\"password\" name=\"password\">\n  </div>\n  <div>\n    <button type=\"submit\">Submit</button>\n  </div>\n</form>\n\n</body>\n</html>"
+      },
+      {
+        "category": "alpaca",
+        "input": "62",
+        "instruction": "Convert this decimal number into a binary number.",
+        "output": "111110"
+      }
+    ]
+  },
+  "sft_val": {
+    "count": 2000,
+    "exists": true,
+    "sample": [
+      {
+        "category": "alpaca",
+        "input": "",
+        "instruction": "Build an SQL query that extracts all the customer data from the customer table who have bought product with id Equal to 2.",
+        "output": "SELECT * FROM customer WHERE product_ID = 2;"
+      },
+      {
+        "category": "alpaca",
+        "input": "Jogging, walking the dog, and jump rope",
+        "instruction": "Edit the following list so that the items are in parallel form.",
+        "output": "Jogging, walking the dog, and jumping rope"
+      },
+      {
+        "category": "alpaca",
+        "input": "",
+        "instruction": "What is the most successful marriage proposal in history?",
+        "output": "The most successful marriage proposal in history is thought to be the one Prince William used when he proposed to Catherine Middleton at the Royal Lodge in 20"
+      }
+    ]
+  },
+  "tokenization_metadata": {
+    "block_size": 256,
+    "bos_token_id": 1,
+    "dropped_tokens": 241,
+    "eos_token_id": 2,
+    "input_path": "data\\stage8_public\\raw\\pretrain_public.txt",
+    "pad_token_id": 0,
+    "seed": 1234,
+    "split_mode": "random_blocks",
+    "total_blocks": 9746,
+    "total_tokens": 2495217,
+    "train_blocks": 9552,
+    "train_path": "data\\stage8_public\\processed_pretrain\\train.npy",
+    "train_samples": 9552,
+    "train_tokens": 2445312,
+    "unk_token_id": 3,
+    "val_blocks": 194,
+    "val_path": "data\\stage8_public\\processed_pretrain\\val.npy",
+    "val_ratio": 0.02,
+    "val_samples": 194,
+    "val_tokens": 49664,
+    "vocab_size": 12000
+  },
+  "tokenizer": {
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "pad_token_id": 0,
+    "unk_token_id": 3,
+    "vocab_size": 12000
+  },
+  "torch_cuda": "12.1",
+  "torch_version": "2.1.0+cu121",
+  "train_npy": {
+    "dtype": "int32",
+    "exists": true,
+    "shape": [
+      2445312
+    ],
+    "tokens": 2445312
+  },
+  "val_npy": {
+    "dtype": "int32",
+    "exists": true,
+    "shape": [
+      49664
+    ],
+    "tokens": 49664
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "URLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))",
+      "label": "dpo_alpaca_farm",
+      "ok": false
+    },
+    {
+      "attempt": 2,
+      "label": "dpo_alpaca_farm",
+      "ok": true,
+      "result": {
+        "download": {
+          "bytes": 14876513,
+          "elapsed_sec": 14.322,
+          "path": "data\\stage8_public\\download_cache\\alpaca_gpt4_preference.json",
+          "url": "https://huggingface.co/datasets/tatsu-lab/alpaca_farm/resolve/main/alpaca_gpt4_preference.json"
+        },
+        "field_probe": [
+          {
+            "fields": [
+              "input",
+              "instruction",
+              "output_1",
+              "output_2",
+              "preference"
+            ],
+            "file": "alpaca_gpt4_preference.json",
+            "first": "{'instruction': 'Access the default browser settings on a computer.', 'input': '', 'output_1': 'To access the default browser settings on a computer, open the settings menu by clicking on the gear icon in the top right corner. Then go to the “Browser” section and adjust the settings as needed. You can change the default home page, add new tabs, or change the search engine.', 'output_2': 'In the Google Chrome browser, the default settings can be accessed by clicking the wrench icon at the top right corner and selecting \"Settings\". In the settings window, you can modify the default search engine, browsing history and other general settings. Additionally, many other browsers such as Microsoft Edge, Mozilla Firefox and Apple Safari have similar settings panels that can be used to access and modify their default settings.', 'preference': 2}"
+          }
+        ],
+        "method": "urllib_json",
+        "rows_count": 11000,
+        "source_file": "alpaca_gpt4_preference.json"
+      }
+    }
+  ],
+  "metadata": {
+    "any_public_success": true,
+    "dpo": {
+      "category_counts": {
+        "alpaca_farm": 10000
+      },
+      "download": {
+        "bytes": 14876513,
+        "elapsed_sec": 14.322,
+        "path": "data\\stage8_public\\download_cache\\alpaca_gpt4_preference.json",
+        "url": "https://huggingface.co/datasets/tatsu-lab/alpaca_farm/resolve/main/alpaca_gpt4_preference.json"
+      },
+      "fallback": false,
+      "field_mapping": "instruction/input plus chosen/rejected or output_1/output_2/preference",
+      "field_probe": [
+        {
+          "fields": [
+            "input",
+            "instruction",
+            "output_1",
+            "output_2",
+            "preference"
+          ],
+          "file": "alpaca_gpt4_preference.json",
+          "first": "{'instruction': 'Access the default browser settings on a computer.', 'input': '', 'output_1': 'To access the default browser settings on a computer, open the settings menu by clicking on the gear icon in the top right corner. Then go to the “Browser” section and adjust the settings as needed. You can change the default home page, add new tabs, or change the search engine.', 'output_2': 'In the Google Chrome browser, the default settings can be accessed by clicking the wrench icon at the top right corner and selecting \"Settings\". In the settings window, you can modify the default search engine, browsing history and other general settings. Additionally, many other browsers such as Microsoft Edge, Mozilla Firefox and Apple Safari have similar settings panels that can be used to access and modify their default settings.', 'preference': 2}"
+        }
+      ],
+      "method": "urllib_json",
+      "rejected_type_counts": {
+        "public_preference": 10000
+      },
+      "source_dataset": "tatsu-lab/alpaca_farm",
+      "source_file": "alpaca_gpt4_preference.json",
+      "success": true,
+      "train": 10000,
+      "val": 1000
+    },
+    "grpo": {
+      "fallback": false,
+      "note": "GRPO remains local verifiable reward data by design.",
+      "source_dataset": "local_verifiable_reward",
+      "success": true
+    },
+    "note": "Stage 8 redownload attempt. No Stage 7 synthetic fallback is written by this script.",
+    "pretrain": {
+      "bytes": 10700387,
+      "chars": 10662375,
+      "config": "wikitext-2-raw-v1",
+      "download": {
+        "bytes": 6357543,
+        "elapsed_sec": 10.041,
+        "path": "data\\stage8_public\\download_cache\\wikitext-2-raw-v1__train-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/main/wikitext-2-raw-v1/train-00000-of-00001.parquet"
+      },
+      "fallback": false,
+      "lines": 16929,
+      "method": "urllib_parquet",
+      "path": "data\\stage8_public\\raw\\pretrain_public.txt",
+      "samples": 16929,
+      "source_dataset": "Salesforce/wikitext",
+      "source_file": "wikitext-2-raw-v1/train-00000-of-00001.parquet",
+      "split": "train",
+      "success": true
+    },
+    "sft": {
+      "category_counts": {
+        "alpaca": 20000
+      },
+      "download": {
+        "bytes": 24246638,
+        "elapsed_sec": 21.027,
+        "path": "data\\stage8_public\\download_cache\\data__train-00000-of-00001-a09b74b3ef9c3b56.parquet",
+        "url": "https://huggingface.co/datasets/tatsu-lab/alpaca/resolve/main/data/train-00000-of-00001-a09b74b3ef9c3b56.parquet"
+      },
+      "fallback": false,
+      "field_mapping": {
+        "category": "alpaca",
+        "input": "input",
+        "instruction": "instruction",
+        "output": "output"
+      },
+      "method": "urllib_parquet",
+      "source_dataset": "tatsu-lab/alpaca",
+      "source_file": "data/train-00000-of-00001-a09b74b3ef9c3b56.parquet",
+      "split": "train",
+      "success": true,
+      "train": 20000,
+      "val": 2000
+    }
+  }
+}

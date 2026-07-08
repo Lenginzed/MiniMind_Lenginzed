@@ -1,0 +1,90 @@
+{
+  "cache": {
+    "cache_exists": true,
+    "hf_datasets_cache": "C:\\Users\\user\\.cache\\huggingface\\datasets",
+    "partial_or_lock_files_sample": []
+  },
+  "environment": {
+    "ALL_PROXY": null,
+    "CURL_CA_BUNDLE": null,
+    "HF_DATASETS_CACHE": null,
+    "HF_ENDPOINT": null,
+    "HF_HOME": null,
+    "HTTPS_PROXY": null,
+    "HTTP_PROXY": null,
+    "REQUESTS_CA_BUNDLE": null
+  },
+  "huggingface_hub_api": {
+    "Salesforce/wikitext": {
+      "elapsed_sec": 0.181,
+      "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/datasets/Salesforce/wikitext (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))))\"), '(Request ID: ffa4702d-263b-48c0-92e5-c4b857a63fff)')",
+      "ok": false
+    },
+    "roneneldan/TinyStories": {
+      "elapsed_sec": 0.138,
+      "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/datasets/roneneldan/TinyStories (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))))\"), '(Request ID: 800471b8-876d-41fa-8679-910474248698)')",
+      "ok": false
+    },
+    "tatsu-lab/alpaca": {
+      "elapsed_sec": 0.117,
+      "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/datasets/tatsu-lab/alpaca (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))))\"), '(Request ID: dda6e993-c667-45a5-b1b1-c61acc5bb5b9)')",
+      "ok": false
+    }
+  },
+  "python_executable": "D:\\anaconda3\\envs\\YSJAirCombat\\python.exe",
+  "python_version": "3.8.19 (default, Mar 20 2024, 19:55:45) [MSC v.1916 64 bit (AMD64)]",
+  "requests": {
+    "https://huggingface.co": {
+      "elapsed_sec": 0.354,
+      "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: / (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))))\"))",
+      "ok": false
+    },
+    "https://huggingface.co/api/datasets/Salesforce/wikitext": {
+      "elapsed_sec": 0.168,
+      "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/datasets/Salesforce/wikitext (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))))\"))",
+      "ok": false
+    },
+    "https://huggingface.co/api/datasets/tatsu-lab/alpaca": {
+      "elapsed_sec": 0.14,
+      "error": "ProxyError(MaxRetryError(\"HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/datasets/tatsu-lab/alpaca (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))))\"))",
+      "ok": false
+    }
+  },
+  "ssl": {
+    "default_verify_paths": {
+      "cafile": "D:\\anaconda3\\Library\\ssl\\cacert.pem",
+      "capath": null,
+      "openssl_cafile": "C:\\Program Files\\Common Files\\ssl/cert.pem",
+      "openssl_cafile_env": "SSL_CERT_FILE",
+      "openssl_capath": "C:\\Program Files\\Common Files\\ssl/certs",
+      "openssl_capath_env": "SSL_CERT_DIR"
+    },
+    "openssl_version": "OpenSSL 3.0.16 11 Feb 2025"
+  },
+  "urllib": {
+    "https://huggingface.co": {
+      "body_head": "<!doctype html>\n<html class=\"\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\" />\n\n\t\t<meta name=\"description\" content=\"We",
+      "elapsed_sec": 4.87,
+      "ok": true,
+      "status": 200
+    },
+    "https://huggingface.co/api/datasets/Salesforce/wikitext": {
+      "body_head": "{\"_id\":\"621ffdd236468d709f18200d\",\"id\":\"Salesforce/wikitext\",\"author\":\"Salesforce\",\"sha\":\"b08601e04326c79dfdd32d625aee71d232d685c3\",\"lastModified\":\"2024-01-04T16:49:18.000Z\",\"private\":false,\"gated\":fa",
+      "elapsed_sec": 5.224,
+      "ok": true,
+      "status": 200
+    },
+    "https://huggingface.co/api/datasets/tatsu-lab/alpaca": {
+      "body_head": "{\"_id\":\"640f5b2fb63b6f18522d6d44\",\"id\":\"tatsu-lab/alpaca\",\"author\":\"tatsu-lab\",\"sha\":\"dce01c9b08f87459cf36a430d809084718273017\",\"lastModified\":\"2023-05-22T20:33:36.000Z\",\"private\":false,\"gated\":false,",
+      "elapsed_sec": 0.795,
+      "ok": true,
+      "status": 200
+    }
+  },
+  "versions": {
+    "certifi": "2024.8.30",
+    "datasets": "3.1.0",
+    "huggingface_hub": "0.36.2",
+    "requests": "2.32.3"
+  }
+}

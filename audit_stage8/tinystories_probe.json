@@ -1,0 +1,10 @@
+{
+  "dataset": "roneneldan/TinyStories",
+  "url": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStories-valid.txt",
+  "ok": true,
+  "attempt": 1,
+  "bytes": 1048576,
+  "path": "data\\stage8_public\\download_cache\\tinystories_probe_valid_head.txt",
+  "elapsed_sec": 12.905,
+  "error": null
+}

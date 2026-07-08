@@ -1,0 +1,54 @@
+{
+  "any_public_success": false,
+  "manual_download_guidance": {
+    "dpo": {
+      "output": "data/stage8_public/dpo/dpo_train.jsonl and dpo_val.jsonl",
+      "preferred": "tatsu-lab/alpaca_farm preference config, fields instruction/input plus chosen/rejected or output_1/output_2/preference"
+    },
+    "pretrain": {
+      "output": "data/stage8_public/raw/pretrain_public.txt",
+      "preferred": "Salesforce/wikitext, config=wikitext-2-raw-v1, split=train, field=text"
+    },
+    "sft": {
+      "output": "data/stage8_public/sft/sft_train.jsonl and sft_val.jsonl",
+      "preferred": "tatsu-lab/alpaca, split=train, fields=instruction/input/output"
+    }
+  },
+  "probe_timeout_sec": 90.0,
+  "probes": [
+    {
+      "chars": 0,
+      "config": "wikitext-2-raw-v1",
+      "dataset": "Salesforce/wikitext",
+      "elapsed_sec": 24.769,
+      "error": "ConnectionError(\"Couldn't reach 'Salesforce/wikitext' on the Hub (ProxyError)\")",
+      "field": "text",
+      "fields": [],
+      "first_sample": {},
+      "nonempty_count": 0,
+      "ok": false,
+      "sample_count": 0,
+      "split": "train",
+      "timed_out": false,
+      "timeout_sec": 90.0
+    },
+    {
+      "chars": 0,
+      "config": null,
+      "dataset": "tatsu-lab/alpaca",
+      "elapsed_sec": 24.698,
+      "error": "ConnectionError(\"Couldn't reach 'tatsu-lab/alpaca' on the Hub (ProxyError)\")",
+      "field": "output",
+      "fields": [],
+      "first_sample": {},
+      "nonempty_count": 0,
+      "ok": false,
+      "sample_count": 0,
+      "split": "train",
+      "timed_out": false,
+      "timeout_sec": 90.0
+    }
+  ],
+  "python_executable": "D:\\anaconda3\\envs\\YSJAirCombat\\python.exe",
+  "successful_datasets": []
+}
