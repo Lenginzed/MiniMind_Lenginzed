@@ -1,0 +1,30 @@
+seed: 20260711
+policy_checkpoint: outputs/sft_full/checkpoints/best.pt
+tokenizer_path: data/tokenizers/mixed_tokenizer.json
+train_data_path: data/grpo/grpo_train.jsonl
+val_data_path: data/grpo/grpo_val.jsonl
+output_dir: outputs/grpo_full
+prefer_cuda: true
+dtype: auto
+max_prompt_length: 96
+max_new_tokens: 32
+num_generations: 4
+beta_kl: 0.0
+clip_epsilon: 0.2
+temperature: 1.0
+top_k: 50
+top_p: 0.95
+
+training:
+  batch_size: 4
+  gradient_accumulation_steps: 1
+  max_steps: 60
+  eval_interval: 10
+  save_interval: 25
+  log_interval: 10
+  eval_examples: 32
+  learning_rate: 5.0e-5
+  weight_decay: 0.0
+  grad_clip: 1.0
+  scheduler: cosine
+  warmup_steps: 5

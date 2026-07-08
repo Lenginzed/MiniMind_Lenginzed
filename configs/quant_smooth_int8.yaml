@@ -1,0 +1,15 @@
+seed: 20260712
+checkpoint: outputs/sft_full/checkpoints/best.pt
+tokenizer_path: data/tokenizers/mixed_tokenizer.json
+eval_data_path: data/sft/sft_val.jsonl
+calibration_data_path: data/sft/sft_train.jsonl
+output_dir: outputs/quant_smooth_int8
+method: smoothquant_style
+num_bits: 8
+per_channel: true
+alpha: 0.5
+calibration_max_batches: 10
+eval_max_batches: 10
+batch_size: 8
+dtype: auto
+prefer_cuda: true

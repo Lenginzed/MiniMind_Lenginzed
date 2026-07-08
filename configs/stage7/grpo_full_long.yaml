@@ -1,0 +1,30 @@
+seed: 20260713
+policy_checkpoint: outputs/stage7/sft_full_long/checkpoints/best.pt
+tokenizer_path: data/stage7/tokenizers/stage7_tokenizer.json
+train_data_path: data/stage7/raw/grpo_train.jsonl
+val_data_path: data/stage7/raw/grpo_val.jsonl
+output_dir: outputs/stage7/grpo_full_long
+prefer_cuda: true
+dtype: bf16
+max_prompt_length: 160
+max_new_tokens: 32
+num_generations: 4
+beta_kl: 0.0
+clip_epsilon: 0.2
+temperature: 1.0
+top_k: 50
+top_p: 0.95
+
+training:
+  batch_size: 2
+  gradient_accumulation_steps: 1
+  max_steps: 80
+  eval_interval: 20
+  save_interval: 40
+  log_interval: 20
+  eval_examples: 40
+  learning_rate: 2.0e-5
+  weight_decay: 0.0
+  grad_clip: 1.0
+  scheduler: cosine
+  warmup_steps: 10

@@ -1,0 +1,14 @@
+seed: 20260712
+checkpoint: outputs/sft_full/checkpoints/best.pt
+tokenizer_path: data/tokenizers/mixed_tokenizer.json
+eval_data_path: data/sft/sft_val.jsonl
+calibration_data_path: data/sft/sft_train.jsonl
+output_dir: outputs/quant_gptq_int4
+method: gptq_style
+num_bits: 4
+per_channel: true
+calibration_max_batches: 10
+eval_max_batches: 10
+batch_size: 8
+dtype: auto
+prefer_cuda: true

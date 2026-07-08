@@ -1,0 +1,12 @@
+vocab_size: 8000
+context_length: 256
+n_layer: 8
+n_embd: 384
+n_head: 6
+n_kv_head: 2
+intermediate_size: 1536
+rms_norm_eps: 1.0e-6
+rope_theta: 10000.0
+dropout: 0.0
+tie_word_embeddings: true
+use_gradient_checkpointing: true

@@ -1,0 +1,37 @@
+seed: 20260718
+base_checkpoint: outputs/stage8_public/pretrain_public_long/checkpoints/best.pt
+tokenizer_path: data/stage8_public/tokenizers/public_tokenizer.json
+train_data_path: data/stage8_public/sft/sft_train.jsonl
+val_data_path: data/stage8_public/sft/sft_val.jsonl
+output_dir: outputs/stage8_public/sft_public_lora
+prefer_cuda: true
+dtype: bf16
+max_length: 256
+
+lora:
+  enabled: true
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: ["q_proj", "v_proj"]
+
+training:
+  batch_size: 8
+  gradient_accumulation_steps: 2
+  max_steps: 1500
+  eval_interval: 100
+  save_interval: 500
+  log_interval: 100
+  eval_batches: 20
+  learning_rate: 3.0e-4
+  weight_decay: 0.01
+  grad_clip: 1.0
+  scheduler: cosine
+  warmup_steps: 100
+
+sample_prompts:
+  - "What is LoRA?"
+  - "Explain causal language modeling."
+  - "Give three differences between SFT and pretraining."
+  - "What does gradient checkpointing do?"
+  - "Why does an air-combat agent need a reward function?"

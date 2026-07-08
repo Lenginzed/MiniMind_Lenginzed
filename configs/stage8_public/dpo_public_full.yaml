@@ -1,0 +1,30 @@
+seed: 20260718
+policy_checkpoint: outputs/stage8_public/sft_public_full/checkpoints/best.pt
+reference_checkpoint: outputs/stage8_public/sft_public_full/checkpoints/best.pt
+tokenizer_path: data/stage8_public/tokenizers/public_tokenizer.json
+train_data_path: data/stage8_public/dpo/dpo_train.jsonl
+val_data_path: data/stage8_public/dpo/dpo_val.jsonl
+output_dir: outputs/stage8_public/dpo_public_full
+prefer_cuda: true
+dtype: bf16
+max_length: 256
+beta: 0.1
+
+training:
+  batch_size: 2
+  gradient_accumulation_steps: 4
+  max_steps: 1000
+  eval_interval: 100
+  save_interval: 500
+  log_interval: 100
+  eval_batches: 20
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  grad_clip: 1.0
+  scheduler: cosine
+  warmup_steps: 100
+
+sample_prompts:
+  - "What is LoRA?"
+  - "Explain causal language modeling."
+  - "What does gradient checkpointing do?"

@@ -1,0 +1,40 @@
+seed: 20260713
+base_checkpoint: outputs/stage7/pretrain_long/checkpoints/best.pt
+tokenizer_path: data/stage7/tokenizers/stage7_tokenizer.json
+train_data_path: data/stage7/raw/sft_train.jsonl
+val_data_path: data/stage7/raw/sft_val.jsonl
+output_dir: outputs/stage7/sft_lora_long
+prefer_cuda: true
+dtype: bf16
+max_length: 256
+
+lora:
+  enabled: true
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - v_proj
+    - o_proj
+
+training:
+  batch_size: 8
+  gradient_accumulation_steps: 2
+  max_steps: 400
+  eval_interval: 50
+  save_interval: 100
+  log_interval: 50
+  eval_batches: 20
+  learning_rate: 3.0e-4
+  weight_decay: 0.0
+  grad_clip: 1.0
+  scheduler: cosine
+  warmup_steps: 40
+
+sample_prompts:
+  - "什么是 LoRA？"
+  - "Explain causal language modeling."
+  - "用三点解释 SFT 和预训练的区别。"
+  - "What does gradient checkpointing do?"
+  - "空战智能体为什么需要奖励函数？"
