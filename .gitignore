@@ -1,0 +1,68 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local IDE / OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Training outputs and large artifacts
+outputs/
+**/checkpoints/
+**/adapters/
+**/adapters/*.pt
+**/adapters/*.pth
+**/adapters/*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# TensorBoard and experiment caches
+**/logs/
+events.out.tfevents.*
+**/events.out.tfevents*
+wandb/
+runs/
+
+# Raw and processed datasets
+data/
+data/**/raw/
+data/**/processed/
+data/**/processed*/
+data/**/processed_*/
+data/**/processed_pretrain/
+data/**/download_cache/
+data/**/*.npy
+data/**/*.npz
+data/**/*.bin
+data/**/*.parquet
+data/**/*.arrow
+data/**/*.jsonl
+data/**/*.txt
+
+# Hugging Face / dataset caches
+.cache/
+hf_cache/
+huggingface/
+datasets_cache/
+
+# Local machine/environment audit outputs. Stage-level public audit summaries
+# are kept under audit_stage*/ and may be committed selectively.
+audit/
+audit_ysj/
+
+# Keep README-ready lightweight assets.
+!docs/assets/
+!docs/assets/*.png

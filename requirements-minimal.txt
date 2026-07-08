@@ -1,0 +1,20 @@
+# Minimal dependencies for local tests, training scripts, public-data prep,
+# plotting, and audit utilities.
+#
+# PyTorch is intentionally not pinned here. Install the CUDA/CPU build that
+# matches your machine from https://pytorch.org/get-started/locally/.
+torch
+numpy
+tokenizers
+tqdm
+matplotlib
+tensorboard
+pyyaml
+pytest
+safetensors
+
+# Used by Stage 8 public-data access and parquet conversion scripts.
+datasets
+huggingface_hub
+requests
+pyarrow
