@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Verify the YSJAirCombat Python environment for the MiniMInd mini-LLM project.
+Verify a local Python environment for the MiniMind mini-LLM project.
 
 Recommended command:
-    D:\anaconda3\envs\YSJAirCombat\python.exe scripts\verify_ysj_env.py
+    python scripts\verify_local_env.py
 
 Optional audit output:
-    D:\anaconda3\envs\YSJAirCombat\python.exe scripts\verify_ysj_env.py --write-audit
+    python scripts\verify_local_env.py --write-audit
 """
 
 from __future__ import annotations
@@ -27,7 +27,7 @@ from typing import Any, Dict, List, Optional
 
 
 ROOT = Path(__file__).resolve().parents[1]
-AUDIT_DIR = ROOT / "audit_ysj"
+AUDIT_DIR = ROOT / "audit_local_env"
 RAW_OUTPUTS: List[Dict[str, Any]] = []
 
 
@@ -370,7 +370,7 @@ def build_hardware_md(audit: Dict[str, Any]) -> str:
     torch_info = audit["torch"]
     packages = audit["packages"]
     lines = [
-        "# YSJAirCombat Environment Audit",
+        "# Local Environment Audit",
         "",
         "Generated at: `%s`" % audit["generated_at"],
         "",
@@ -446,11 +446,11 @@ def build_recommendation_md(audit: Dict[str, Any]) -> str:
     tiny = audit["model_scale_recommendation"]["tiny_smoke_config"]
     main = audit["model_scale_recommendation"]["main_target_config"]
     lines = [
-        "# YSJAirCombat Recommendation",
+        "# Local Environment Recommendation",
         "",
         "## Summary",
-        "- Use `D:\\anaconda3\\envs\\YSJAirCombat\\python.exe` for this project stage.",
-        "- Do not use the Anaconda base environment because its PyTorch import is broken.",
+        "- Use a local Python environment where PyTorch imports successfully.",
+        "- If a base environment has a broken PyTorch install, create or select a clean project environment.",
         "- Stage 1 should use the tiny smoke config only; do not test the 40M-50M config yet.",
         "- First full from-scratch target is reduced to about 40M-50M for a complete, stable training/post-training loop.",
         "",
@@ -476,8 +476,8 @@ def build_recommendation_md(audit: Dict[str, Any]) -> str:
             "",
             "Install only missing minimal packages when needed, using the target interpreter:",
             "",
-            "```powershell",
-            "& 'D:\\anaconda3\\envs\\YSJAirCombat\\python.exe' -m pip install -r requirements-minimal.txt",
+            "```bash",
+            "python -m pip install -r requirements-minimal.txt",
             "```",
             "",
             "Do not install transformers/datasets/peft/trl/bitsandbytes/vLLM/DeepSpeed/flash-attn for Stage 1.",
@@ -515,11 +515,11 @@ def build_recommendation_md(audit: Dict[str, Any]) -> str:
 
 def write_audit_files(audit: Dict[str, Any]) -> None:
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
-    (AUDIT_DIR / "env_audit_ysj.json").write_text(
+    (AUDIT_DIR / "env_audit_local_env.json").write_text(
         json.dumps(audit, indent=2, ensure_ascii=False, sort_keys=True),
         encoding="utf-8",
     )
-    (AUDIT_DIR / "hardware_audit_ysj.md").write_text(build_hardware_md(audit), encoding="utf-8")
+    (AUDIT_DIR / "hardware_audit_local_env.md").write_text(build_hardware_md(audit), encoding="utf-8")
     (AUDIT_DIR / "recommendation_ysj.md").write_text(build_recommendation_md(audit), encoding="utf-8")
     write_raw_outputs(AUDIT_DIR / "raw_command_outputs_ysj.txt")
 
@@ -556,8 +556,8 @@ def print_summary(audit: Dict[str, Any]) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Verify YSJAirCombat environment.")
-    parser.add_argument("--write-audit", action="store_true", help="Write audit_ysj report files.")
+    parser = argparse.ArgumentParser(description="Verify a local Python environment.")
+    parser.add_argument("--write-audit", action="store_true", help="Write audit_local_env report files.")
     args = parser.parse_args()
     try:
         audit = collect_audit()

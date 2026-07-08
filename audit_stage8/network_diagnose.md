@@ -1,11 +1,11 @@
 # Stage 8 Network Diagnose
 
-- Python executable: `D:\anaconda3\envs\YSJAirCombat\python.exe`
+- Python executable: `<local_python_executable>`
 - datasets version: `3.1.0`
 - huggingface_hub version: `0.36.2`
 - requests version: `2.32.3`
 - OpenSSL: `OpenSSL 3.0.16 11 Feb 2025`
-- HF datasets cache: `C:\Users\user\.cache\huggingface\datasets`
+- HF datasets cache: `<hf_datasets_cache>`
 - Cache exists: `True`
 - Partial/cache lock sample count: `0`
 
@@ -40,12 +40,12 @@
 ```json
 {
   "default_verify_paths": {
-    "cafile": "D:\\anaconda3\\Library\\ssl\\cacert.pem",
+    "cafile": "<local_ssl_cafile>",
     "capath": null,
     "openssl_cafile_env": "SSL_CERT_FILE",
-    "openssl_cafile": "C:\\Program Files\\Common Files\\ssl/cert.pem",
+    "openssl_cafile": "<openssl_cafile>",
     "openssl_capath_env": "SSL_CERT_DIR",
-    "openssl_capath": "C:\\Program Files\\Common Files\\ssl/certs"
+    "openssl_capath": "<openssl_capath>"
   },
   "openssl_version": "OpenSSL 3.0.16 11 Feb 2025"
 }

@@ -3,7 +3,7 @@
 ## Command
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\train_dpo.py --config configs\dpo_lora.yaml
+& '<local_python_executable>' scripts\train_dpo.py --config configs\dpo_lora.yaml
 ```
 
 ## Setup

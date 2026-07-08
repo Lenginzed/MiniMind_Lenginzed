@@ -1,6 +1,6 @@
 # Stage 7 Preflight Report
 
-- Python executable: `D:\anaconda3\envs\YSJAirCombat\python.exe`
+- Python executable: `<local_python_executable>`
 - Torch: `2.1.0+cu121` CUDA `12.1`
 - CUDA available: `True`
 - GPU: `NVIDIA GeForce RTX 4080 SUPER`
@@ -44,7 +44,7 @@ Wed Jul  8 13:26:08 2026
 |    0   N/A  N/A           12572    C+G   ...indows\System32\ShellHost.exe      N/A      |
 |    0   N/A  N/A           12976    C+G   ...ntrolPanel\SystemSettings.exe      N/A      |
 |    0   N/A  N/A           13032    C+G   ...t\Edge\Application\msedge.exe      N/A      |
-|    0   N/A  N/A           13272    C+G   C:\Windows\explorer.exe               N/A      |
+|    0   N/A  N/A           13272    C+G   <windows_process_path>               N/A      |
 |    0   N/A  N/A           13712    C+G   ...2txyewy\CrossDeviceResume.exe      N/A      |
 |    0   N/A  N/A           15868    C+G   ..._cw5n1h2txyewy\SearchHost.exe      N/A      |
 |    0   N/A  N/A           15876    C+G   ...y\StartMenuExperienceHost.exe      N/A      |

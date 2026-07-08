@@ -103,9 +103,9 @@ Implemented tests:
 - `tests/test_rope.py`: RoPE shape preservation and finite values
 - `tests/test_generation.py`: greedy and sampled generation shape/length checks
 
-Verification status in `YSJAirCombat`:
+Verification status in `local Conda environment`:
 
-- `scripts/verify_ysj_env.py --write-audit`: passed
+- `scripts/verify_local_env.py --write-audit`: passed
 - `scripts/smoke_model_forward.py`: passed on CUDA, parameter count `82,240`
 - `python -m py_compile ...`: passed
 - `python -m pytest -q`: passed in Stage 1.1, `23 passed`
@@ -113,13 +113,13 @@ Verification status in `YSJAirCombat`:
 Smoke script:
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\smoke_model_forward.py
+& '<local_python_executable>' scripts\smoke_model_forward.py
 ```
 
 Pytest command once pytest is installed:
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' -m pytest -q
+& '<local_python_executable>' -m pytest -q
 ```
 
 ## Not Implemented Yet

@@ -49,6 +49,6 @@
       "timeout_sec": 90.0
     }
   ],
-  "python_executable": "D:\\anaconda3\\envs\\YSJAirCombat\\python.exe",
+  "python_executable": "<local_python_executable>",
   "successful_datasets": []
 }

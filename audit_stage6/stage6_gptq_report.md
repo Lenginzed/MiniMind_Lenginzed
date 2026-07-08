@@ -3,7 +3,7 @@
 ## Command
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\quantize_eval.py --config configs\quant_gptq_int4.yaml
+& '<local_python_executable>' scripts\quantize_eval.py --config configs\quant_gptq_int4.yaml
 ```
 
 ## Setup

@@ -26,7 +26,7 @@ Full DPO saves best/last model checkpoints. DPO-LoRA saves best/last full policy
 
 ## Tests
 
-`D:\anaconda3\envs\YSJAirCombat\python.exe -m pytest -q` passed with 51 tests. New Stage 4 tests cover DPO data masking/collation, sequence logprob masking, DPO loss, reference freeze, and CPU smoke runs for Full DPO and DPO-LoRA.
+`<local_python_executable> -m pytest -q` passed with 51 tests. New Stage 4 tests cover DPO data masking/collation, sequence logprob masking, DPO loss, reference freeze, and CPU smoke runs for Full DPO and DPO-LoRA.
 
 ## TODO
 

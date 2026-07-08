@@ -1,7 +1,7 @@
 {
   "cache": {
     "cache_exists": true,
-    "hf_datasets_cache": "C:\\Users\\user\\.cache\\huggingface\\datasets",
+    "hf_datasets_cache": "<hf_datasets_cache>",
     "partial_or_lock_files_sample": []
   },
   "environment": {
@@ -31,7 +31,7 @@
       "ok": false
     }
   },
-  "python_executable": "D:\\anaconda3\\envs\\YSJAirCombat\\python.exe",
+  "python_executable": "<local_python_executable>",
   "python_version": "3.8.19 (default, Mar 20 2024, 19:55:45) [MSC v.1916 64 bit (AMD64)]",
   "requests": {
     "https://huggingface.co": {
@@ -52,11 +52,11 @@
   },
   "ssl": {
     "default_verify_paths": {
-      "cafile": "D:\\anaconda3\\Library\\ssl\\cacert.pem",
+      "cafile": "<local_ssl_cafile>",
       "capath": null,
-      "openssl_cafile": "C:\\Program Files\\Common Files\\ssl/cert.pem",
+      "openssl_cafile": "<openssl_cafile>",
       "openssl_cafile_env": "SSL_CERT_FILE",
-      "openssl_capath": "C:\\Program Files\\Common Files\\ssl/certs",
+      "openssl_capath": "<openssl_capath>",
       "openssl_capath_env": "SSL_CERT_DIR"
     },
     "openssl_version": "OpenSSL 3.0.16 11 Feb 2025"

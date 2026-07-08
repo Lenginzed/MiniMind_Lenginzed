@@ -1,10 +1,10 @@
 # Stage 8 Public Data Preflight
 
-- Python executable: `D:\anaconda3\envs\YSJAirCombat\python.exe`
+- Python executable: `<local_python_executable>`
 - datasets importable: `True`
 - huggingface_hub importable: `True`
 - Hugging Face network: `{'ok': False, 'error': "URLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))", 'elapsed_sec': 5.122}`
-- HF datasets cache: `C:\Users\user\.cache\huggingface\datasets`
+- HF datasets cache: `<hf_datasets_cache>`
 - Disk free: `713.51` GB / `875.28` GB
 
 ## Target Dataset Access

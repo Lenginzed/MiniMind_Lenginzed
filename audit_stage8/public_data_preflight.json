@@ -2,7 +2,7 @@
   "datasets_installed": true,
   "disk_free_gb": 713.51,
   "disk_total_gb": 875.28,
-  "hf_datasets_cache": "C:\\Users\\user\\.cache\\huggingface\\datasets",
+  "hf_datasets_cache": "<hf_datasets_cache>",
   "hf_home": null,
   "hostname": "DESKTOP-UDTH127",
   "huggingface_hub_installed": true,
@@ -11,7 +11,7 @@
     "error": "URLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))",
     "ok": false
   },
-  "python_executable": "D:\\anaconda3\\envs\\YSJAirCombat\\python.exe",
+  "python_executable": "<local_python_executable>",
   "python_version": "3.8.19 (default, Mar 20 2024, 19:55:45) [MSC v.1916 64 bit (AMD64)]",
   "targets": [
     {

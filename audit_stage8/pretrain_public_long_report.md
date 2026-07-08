@@ -1,6 +1,6 @@
 # Stage 8 Public Pretrain Report
 
-- Command: `D:\anaconda3\envs\YSJAirCombat\python.exe scripts\train_pretrain.py --config configs\stage8_public\pretrain_public_long.yaml`
+- Command: `<local_python_executable> scripts\train_pretrain.py --config configs\stage8_public\pretrain_public_long.yaml`
 - Parameter count: `45631296`
 - Device/dtype: `cuda` / `bf16`
 - Steps: `1500`

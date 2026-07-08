@@ -161,17 +161,19 @@ python scripts/train_dpo.py --config configs/stage8_public/dpo_public_lora.yaml
 
 ### 5. Original Audited Local Environment
 
-The original audited run was executed on Windows with an RTX 4080 SUPER using a local Conda environment at `D:\anaconda3\envs\YSJAirCombat\python.exe`. This path is not required for reproduction; see [docs/env_setup_ysj.md](docs/env_setup_ysj.md) for the original environment audit notes.
+The original audited run was executed on Windows with an RTX 4080 SUPER using a local Conda environment. The local Python path is intentionally omitted from the public README because it is not required for reproduction; see [docs/environment.md](docs/environment.md) for environment notes.
 
 ## More Documentation
 
 - [Training stack](docs/training_stack.md)
+- [Environment setup](docs/environment.md)
 - [Experiment results](docs/experiment_results.md)
 - [Limitations](docs/limitations.md)
 - [Interview notes](docs/interview_notes.md)
 - [Artifact policy](docs/artifact_policy.md)
 - [Data sources](docs/data_sources.md)
 - [Model card](docs/model_card.md)
+- [Local reference audit](docs/local_reference_audit.md)
 - [Release checklist](docs/release_checklist.md)
 - [Stage 8 public final audit](audit_stage8/stage8_public_final_report.md)
 - [Stage 7 synthetic long-run summary](audit_stage7/stage7_interview_summary.md)

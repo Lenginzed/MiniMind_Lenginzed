@@ -1,6 +1,6 @@
 # Stage 8 Public Recovery Probe
 
-- Python executable: `D:\anaconda3\envs\YSJAirCombat\python.exe`
+- Python executable: `<local_python_executable>`
 - Per-dataset timeout: `90.0` seconds
 - Any public dataset success: `False`
 - Successful datasets: `[]`

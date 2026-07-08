@@ -26,7 +26,7 @@ Both runs saved best/last checkpoints, metrics JSONL/CSV, TensorBoard logs, roll
 
 ## Tests
 
-`D:\anaconda3\envs\YSJAirCombat\python.exe -m pytest -q` passed with 64 tests. Stage 5 tests cover reward helpers, advantage normalization, clipped loss behavior including zero advantage, and CPU smoke runs for Full GRPO and GRPO-LoRA.
+`<local_python_executable> -m pytest -q` passed with 64 tests. Stage 5 tests cover reward helpers, advantage normalization, clipped loss behavior including zero advantage, and CPU smoke runs for Full GRPO and GRPO-LoRA.
 
 ## TODO
 

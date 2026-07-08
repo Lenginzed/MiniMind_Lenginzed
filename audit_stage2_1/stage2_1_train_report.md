@@ -3,7 +3,7 @@
 ## Hardened Run Command
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\train_pretrain.py --config configs\pretrain_stage2_hardened.yaml
+& '<local_python_executable>' scripts\train_pretrain.py --config configs\pretrain_stage2_hardened.yaml
 ```
 
 ## Run Summary

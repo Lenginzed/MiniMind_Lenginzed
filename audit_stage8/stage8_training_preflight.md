@@ -1,6 +1,6 @@
 # Stage 8 Training Preflight
 
-- Python executable: `D:\anaconda3\envs\YSJAirCombat\python.exe`
+- Python executable: `<local_python_executable>`
 - Torch: `2.1.0+cu121`, CUDA: `12.1`
 - CUDA available: `True`
 - bf16 supported: `True`

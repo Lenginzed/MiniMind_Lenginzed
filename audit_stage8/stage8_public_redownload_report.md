@@ -7,14 +7,14 @@
 
 ## Network Diagnose Summary
 
-- Python executable: `D:\anaconda3\envs\YSJAirCombat\python.exe`
+- Python executable: `<local_python_executable>`
 - datasets version: `3.1.0`
 - huggingface_hub version: `0.36.2`
 - urllib huggingface.co: `True`
 - urllib WikiText API: `True`
 - urllib Alpaca API: `True`
 - requests huggingface.co: `False`; error: `ProxyError(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: / (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:1135)'))))"))`
-- HF cache: `C:\Users\user\.cache\huggingface\datasets`
+- HF cache: `<hf_datasets_cache>`
 
 ## Dataset Results
 

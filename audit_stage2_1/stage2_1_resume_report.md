@@ -3,8 +3,8 @@
 ## Commands
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\train_pretrain.py --config configs\pretrain_resume_smoke.yaml --max-steps 20
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\train_pretrain.py --config configs\pretrain_resume_smoke.yaml --resume outputs/pretrain_resume_smoke/checkpoints/last.pt --max-steps 30
+& '<local_python_executable>' scripts\train_pretrain.py --config configs\pretrain_resume_smoke.yaml --max-steps 20
+& '<local_python_executable>' scripts\train_pretrain.py --config configs\pretrain_resume_smoke.yaml --resume outputs/pretrain_resume_smoke/checkpoints/last.pt --max-steps 30
 ```
 
 ## Result

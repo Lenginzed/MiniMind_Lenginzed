@@ -3,7 +3,7 @@
 ## Command
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\train_grpo.py --config configs\grpo_lora.yaml
+& '<local_python_executable>' scripts\train_grpo.py --config configs\grpo_lora.yaml
 ```
 
 ## Setup

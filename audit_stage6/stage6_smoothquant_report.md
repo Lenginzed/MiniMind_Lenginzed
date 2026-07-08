@@ -3,7 +3,7 @@
 ## Command
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\quantize_eval.py --config configs\quant_smooth_int8.yaml
+& '<local_python_executable>' scripts\quantize_eval.py --config configs\quant_smooth_int8.yaml
 ```
 
 ## Setup

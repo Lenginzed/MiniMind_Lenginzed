@@ -3,7 +3,7 @@
 ## Command
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\train_pretrain.py --config configs\pretrain_tiny.yaml
+& '<local_python_executable>' scripts\train_pretrain.py --config configs\pretrain_tiny.yaml
 ```
 
 ## Config Summary

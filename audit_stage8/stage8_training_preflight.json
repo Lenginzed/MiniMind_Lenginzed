@@ -216,7 +216,7 @@
   },
   "parameter_count": 45631296,
   "pretrain_config_path": "configs/stage8_public/pretrain_public_long.yaml",
-  "python_executable": "D:\\anaconda3\\envs\\YSJAirCombat\\python.exe",
+  "python_executable": "<local_python_executable>",
   "recommendation": {
     "context_length": 256,
     "dpo_max_steps": 1000,

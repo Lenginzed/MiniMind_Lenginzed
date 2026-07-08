@@ -3,8 +3,8 @@
 ## Commands
 
 ```powershell
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' -m pytest -q
-& 'D:\anaconda3\envs\YSJAirCombat\python.exe' scripts\smoke_model_forward.py
+& '<local_python_executable>' -m pytest -q
+& '<local_python_executable>' scripts\smoke_model_forward.py
 ```
 
 ## Pytest Result

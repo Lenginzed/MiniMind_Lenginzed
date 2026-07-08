@@ -19,7 +19,7 @@ flowchart LR
 
 ## 3. What Each Stage Did
 
-- Stage 0.5: audited the fixed YSJAirCombat Python/CUDA environment.
+- Stage 0.5: audited the fixed local Conda environment Python/CUDA environment.
 - Stage 1: built the decoder-only Causal LM with RMSNorm, RoPE, GQA, SwiGLU, and generation.
 - Stage 2: built tokenizer, block data pipeline, pretrain loop, checkpoints, metrics, and plots.
 - Stage 3: built assistant-only SFT and self-implemented LoRA.

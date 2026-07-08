@@ -14,7 +14,7 @@ This checklist summarizes what is ready for open-source release and what still n
 | `.gitignore` | Ready | Excludes checkpoints, adapters, raw data, processed arrays, logs, caches, outputs |
 | Requirements | Ready | `requirements-minimal.txt` excludes vLLM, flash-attn, DeepSpeed, bitsandbytes |
 | LICENSE | Ready | Remote GitHub repository provides the MIT license |
-| README reproduction path | Ready | README uses generic environment setup commands; the local YSJAirCombat path is only documented as an audit note |
+| README reproduction path | Ready | README uses generic environment setup commands; local machine paths are omitted from public instructions |
 
 ## Repository Size Audit
 
