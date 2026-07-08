@@ -13,7 +13,8 @@ This checklist summarizes what is ready for open-source release and what still n
 | Tests | Existing | Not rerun in this docs/artifact pass |
 | `.gitignore` | Ready | Excludes checkpoints, adapters, raw data, processed arrays, logs, caches, outputs |
 | Requirements | Ready | `requirements-minimal.txt` excludes vLLM, flash-attn, DeepSpeed, bitsandbytes |
-| LICENSE | Pending user choice | Choose MIT or Apache-2.0 before publishing |
+| LICENSE | Ready | Remote GitHub repository provides the MIT license |
+| README reproduction path | Ready | README uses generic environment setup commands; the local YSJAirCombat path is only documented as an audit note |
 
 ## Repository Size Audit
 
@@ -67,19 +68,14 @@ Do not commit:
 - TensorBoard logs
 - Python caches
 
-## License Decision
+## License
 
-The repository currently has no existing license. Before `git init`, `commit`, or `push`, choose one:
-
-- MIT: short and permissive.
-- Apache-2.0: permissive and includes an explicit patent grant.
-
-After choosing, add the corresponding `LICENSE` file at the repository root.
+The GitHub repository was initialized with an MIT license. Keep that `LICENSE` file intact and do not overwrite it during local release updates.
 
 ## Final Pre-Push Steps
 
-1. Confirm license choice and add `LICENSE`.
-2. Run `git status --ignored` after `git init` to verify large artifacts are ignored.
-3. Review README rendered on GitHub, especially Mermaid and image paths.
-4. Run tests if you want a fresh release badge/status: `python -m pytest -q`.
-5. Keep model/checkpoint artifacts out of the repository unless published separately with the model card.
+1. Run `git status --ignored` after checkout/init to verify large artifacts are ignored.
+2. Review README rendered on GitHub, especially Mermaid and image paths.
+3. Run tests if you want a fresh release badge/status: `python -m pytest -q`.
+4. Keep model/checkpoint artifacts out of the repository unless published separately with the model card.
+5. Keep README reproduction commands generic; local machine paths belong in audit notes only.

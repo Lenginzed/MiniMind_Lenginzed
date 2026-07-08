@@ -105,15 +105,50 @@ These results should not be described as production inference acceleration.
 - `outputs/`: generated metrics, checkpoints, samples, and plots.
 - `docs/`: longer design notes, experiment summaries, limitations, and interview notes.
 
-## Reproduce The Main Public Run
+## Quick Start
 
-The local audited environment was:
+### 1. Create An Environment
 
-```powershell
-D:\anaconda3\envs\YSJAirCombat\python.exe
+Using Conda:
+
+```bash
+conda create -n minimind python=3.10 -y
+conda activate minimind
 ```
 
-Representative commands:
+Or using `venv`:
+
+```bash
+python -m venv .venv
+```
+
+Windows:
+
+```powershell
+.venv\Scripts\activate
+```
+
+Linux/macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements-minimal.txt
+```
+
+`requirements-minimal.txt` contains the minimal project requirements for tests, scripts, public-data prep, and plotting. PyTorch is listed there, but CUDA builds are hardware-specific. If needed, install the correct PyTorch build for your CUDA/CPU environment from the official PyTorch instructions.
+
+### 3. Run Tests
+
+```bash
+python -m pytest -q
+```
+
+### 4. Run The Public-Data Training Pipeline
 
 ```bash
 python scripts/stage8_training_preflight.py
@@ -124,11 +159,9 @@ python scripts/train_dpo.py --config configs/stage8_public/dpo_public_full.yaml
 python scripts/train_dpo.py --config configs/stage8_public/dpo_public_lora.yaml
 ```
 
-Run tests:
+### 5. Original Audited Local Environment
 
-```bash
-python -m pytest -q
-```
+The original audited run was executed on Windows with an RTX 4080 SUPER using a local Conda environment at `D:\anaconda3\envs\YSJAirCombat\python.exe`. This path is not required for reproduction; see [docs/env_setup_ysj.md](docs/env_setup_ysj.md) for the original environment audit notes.
 
 ## More Documentation
 

@@ -1,16 +1,18 @@
-# YSJAirCombat Environment Setup
+# YSJAirCombat Environment Audit Notes
 
-## Why Use YSJAirCombat
+## Original Audited Local Environment
 
-This project should use:
+The original audited local run used:
 
 ```powershell
 D:\anaconda3\envs\YSJAirCombat\python.exe
 ```
 
-The previous audit showed that the Anaconda `base` environment has a broken PyTorch install: package metadata exists, but `import torch` fails while loading `fbgemm.dll`. That makes `base` unsuitable for CUDA validation or later training work.
+This path belongs to the author's Windows workstation and is not required for external users. For the author's machine, `YSJAirCombat` was preferred because the Anaconda `base` environment had a broken PyTorch install: package metadata existed, but `import torch` failed while loading `fbgemm.dll`. That made `base` unsuitable for CUDA validation or later training work.
 
-`YSJAirCombat` is preferred because PyTorch imports successfully, CUDA is visible, and RTX 4080 SUPER matmul smoke tests pass.
+`YSJAirCombat` was suitable for the audited runs because PyTorch imported successfully, CUDA was visible, and RTX 4080 SUPER matmul smoke tests passed.
+
+External users should create their own environment and install the project requirements from `requirements-minimal.txt`.
 
 ## Verify The Environment
 
@@ -39,17 +41,17 @@ The script prints:
 
 ## Minimal Dependencies
 
-Stage 1/2 should keep dependencies small:
+For the original audited local environment, missing dependencies could be installed with:
 
 ```powershell
 & 'D:\anaconda3\envs\YSJAirCombat\python.exe' -m pip install -r requirements-minimal.txt
 ```
 
-Only install missing minimal packages when needed. At audit time, the environment already had most required packages, but `pytest` was missing.
+External users can use the generic README quick-start commands instead. Only install missing minimal packages when needed. At audit time, the local environment already had most required packages, but `pytest` was missing.
 
 ## If CUDA Is Healthy
 
-If `verify_ysj_env.py` reports that torch imports, CUDA is available, and fp32/fp16/bf16 matmul tests pass, use `YSJAirCombat` for Stage 1 and later small GPU pretrain experiments.
+For the author's local machine, if `verify_ysj_env.py` reports that torch imports, CUDA is available, and fp32/fp16/bf16 matmul tests pass, `YSJAirCombat` can be used for small GPU experiments.
 
 Do not install large training stack extras yet. Add libraries in stages:
 
