@@ -55,13 +55,23 @@ Public-data details:
 
 ![Public pretrain loss and perplexity](docs/assets/pretrain_public_loss_ppl.png)
 
+*Figure 1. Public WikiText-2 pretraining loss and perplexity over 1,500 steps. The curve shows the training loop learning on public text, while the final perplexity remains high for a small, short-trained model.*
+
 ![Synthetic vs public comparison](docs/assets/public_vs_synthetic_compare.png)
+
+*Figure 2. Stage 7 synthetic results versus Stage 8 public-data results. Public data is less templated and produces less polished but more credible diagnostics.*
 
 ![Public SFT full vs LoRA](docs/assets/sft_public_full_vs_lora.png)
 
+*Figure 3. Full SFT and LoRA-SFT loss curves on Alpaca-format data. Full fine-tuning reached lower loss in this run; LoRA used only about 0.67% trainable parameters.*
+
 ![Public DPO margin and accuracy](docs/assets/dpo_public_margin_acc.png)
 
+*Figure 4. Public AlpacaFarm DPO diagnostics. Preference accuracy stayed modest instead of saturating, which is useful evidence that the public preference task is not trivial for this mini model.*
+
 ![Public-policy GRPO diagnostics](docs/assets/grpo_public_diagnostics.png)
+
+*Figure 5. GRPO diagnostic metrics using local verifiable rewards and a public-SFT policy. Exact accuracy stayed at zero, and reward standard-deviation signals expose the limits of this toy RL setup.*
 
 ## Full Fine-Tuning vs LoRA
 
